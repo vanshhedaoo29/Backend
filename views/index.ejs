@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .search {
+  display: flex;
+  max-width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--beige-color);
+  background: url("https://plus.unsplash.com/premium_photo-1712496047863-f6d866b32f3d?q=80&w=1996&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    center/cover no-repeat fixed;
+  backdrop-filter: blur(15px);
+  z-index: -1;
+}
+
+.search::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: blur(100px);
+  z-index: -1;
+}
+
+.search-container h2 {
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: 800;
+  font-size: 60px;
+  color: var(--brown-color);
+  text-align: left;
+  width: 100%;
+  margin-bottom: 0;
+  margin: 0;
+}
+
+.search-container p {
+  font-family: "Lucida Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  text-align: left;
+}
+
+/* Search Box Container */
+.search-container {
+  max-width: 500px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 2px solid whitesmoke;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  background: white;
+  box-shadow: 2px 4px 10px #63904023;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+
+.search-input:-webkit-autofill {
+  background-color: white !important;
+  box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+.search-button {
+  background: #8ed05cb5;
+  border: none;
+  padding: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease-in-out;
+}
+
+.search-button img {
+  width: 22px;
+  height: 22px;
+}
+
+.search-button:hover {
+  background: var(--green-color);
+}
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <section class="search">
+          <div class="search-container">
+            <h2>Explore Countries</h2>
+            <p>Try India, Russia, or Japan.</p>
+      
+            <form id="searchForm" action="#">
+              <div class="search-box">
+                <input type="search" class="search-input" placeholder="Search..." name="country" id="nameInput" required />
+                <button type="submit" class="search-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50">
+                    <path d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z"></path>
+                  </svg>
+                </button>
+              </div>
+            </form>
+            <p style="font-weight: 400">
+              (Note: Please input correct names of the countries)
+            </p>
+          </div>
+        </section>
+      </div>
+</body>
+</html>
