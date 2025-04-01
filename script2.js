@@ -5,11 +5,11 @@ app.set("view engine", "ejs");
 app.use(express.static('./public'));
 
 app.get("/", function (req, res) {
-    throw Error("Pata nahi bhai");    // don't mention .ejs
+    throw Error("Pata nahi bhai");    
 });
 
 app.get("/error", function (req, res, next) {
-    throw Error("Something went wrong");    // don't mention .ejs
+    throw Error("Something went wrong");    
   });
 
 app.get("/contact", function (req, res) {
